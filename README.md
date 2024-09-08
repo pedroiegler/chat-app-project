@@ -46,3 +46,7 @@ Bem-vindo ao repositório do projeto "Chat"! Neste projeto, foi desenvolvido uma
 - SidebarChats
 - SidebarChatsItem
 - SidebarHeader
+
+> ## 🌐 Acesso ao Projeto
+
+O projeto foi publicado e está disponível para acesso em: <a href="https://chat-app-tan-chi.vercel.app/" target="_blank">Chat App - Vercel</a>
