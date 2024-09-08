@@ -9,6 +9,7 @@ Bem-vindo ao repositório do projeto "Chat"! Neste projeto, foi desenvolvido uma
 - **Google Authentication**: Sistema de autenticação via conta Google, permitindo que os usuários façam login de forma rápida e segura.<br>
 - **Styled-Components**: Biblioteca para estilização em React, permitindo que os estilos sejam escritos diretamente nos componentes, tornando o código mais modular e fácil de manter.<br>
 - **React-Icons**: Coleção de ícones populares para React, proporcionando ícones de alta qualidade com facilidade de uso.<br>
+- **SweetAlert2 (Swal)**: Biblioteca JavaScript para criar diálogos personalizados e atraentes, utilizada para melhorar a experiência do usuário com mensagens e confirmações estilizadas.<br>
 
 > ## 📚 Funcionalidades do Projeto
 
@@ -27,6 +28,9 @@ Bem-vindo ao repositório do projeto "Chat"! Neste projeto, foi desenvolvido uma
 4. **Experiência de Usuário Otimizada**:<br>
   - Envio de mensagens com teclado ou botão de envio.<br>
   - Exibição de histórico de chat, mantendo o estado entre as sessões do usuário.<br>
+
+5. **Diálogos Personalizados**:<br>
+  - Utilização do SweetAlert2 (Swal) para criar mensagens e alertas personalizados.<br>
 
 > ## 📦 Componentes do Projeto
 
