@@ -49,4 +49,4 @@ Bem-vindo ao repositório do projeto "Chat"! Neste projeto, foi desenvolvido uma
 
 > ## 🌐 Acesso ao Projeto
 
-O projeto foi publicado e está disponível para acesso em: <a href="https://chat-app-tan-chi.vercel.app/" target="_blank">Chat App - Vercel</a>
+O projeto foi publicado e está disponível para acesso em: <a href="https://chat-app-tan-chi.vercel.app/">Chat App - Vercel</a>
