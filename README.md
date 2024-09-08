@@ -13,21 +13,21 @@ Bem-vindo ao repositório do projeto "Chat"! Neste projeto, foi desenvolvido uma
 ## 📚 Funcionalidades do Projeto
 
 1. Autenticação de Usuário:<br>
-  -> Implementação do Google Authentication para login seguro.<br>
-  -> Interface de login com opção de autenticação rápida usando contas do Google.<br><br>
+  - Implementação do Google Authentication para login seguro.<br>
+  -> Interface de login com opção de autenticação rápida usando contas do Google.<br>
    
 2. Chat em Tempo Real:<br>
   -> Interface de chat intuitiva com suporte a múltiplos usuários simultâneos.<br>
-  -> Exibição de mensagens com o nome e avatar do usuário, utilizando dados da autenticação Google.<br><br>
+  -> Exibição de mensagens com o nome e avatar do usuário, utilizando dados da autenticação Google.<br>
    
 3. Design Responsivo e Estilizado:<br>
   -> Styled-Components para criar uma interface moderna e responsiva.<br>
-  -> Uso de React-Icons para adicionar ícones ao chat, melhorando a experiência do usuário.<br><br>
+  -> Uso de React-Icons para adicionar ícones ao chat, melhorando a experiência do usuário.<br>
 
 4. Experiência de Usuário Otimizada:<br>
   -> Envio de mensagens com teclado ou botão de envio.<br>
-  -> Exibição de histórico de chat, mantendo o estado entre as sessões do usuário.<br><br>
-
+  -> Exibição de histórico de chat, mantendo o estado entre as sessões do usuário.<br>
+  
 ### `npm start`
 
 Runs the app in the development mode.\
