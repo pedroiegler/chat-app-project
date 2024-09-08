@@ -1,11 +1,11 @@
 import React from "react";
-import { Circle } from "better-react-spinkit";
+import { ClipLoader } from 'react-spinners';
 import * as C from "./styles";
 
 const Loading = () => {
     return (
         <C.Container>
-            <Circle />
+            <ClipLoader color="#123abc" loading={true} size={150} />
         </C.Container>
     );
 };
