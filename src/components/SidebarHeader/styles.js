@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 59px;
+    padding: 15px 20px;
     background-color: #f0f2f5;
-    padding: 10px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,9 +10,27 @@ export const Container = styled.div`
     box-shadow: 0 1px 2px #0003;
 `;
 
+export const Content = styled.div`
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 25px;
+        height: 25px;
+        color: #54656f;
+        cursor: pointer;
+        margin-right: 15px;
+        transition: .2s ease;
+    }
+
+    svg:hover {
+        transform: scale(1.1);
+    }
+`;
+
 export const Avatar = styled.img`
-    width: 35px;
-    height: 35px;
+    width: 39px;
+    height: 39px;
     cursor: pointer;
     border-radius: 50%;
 `;
@@ -23,9 +40,14 @@ export const Options = styled.div`
     gap: 10px;
 
     svg {
-        width: 24px;
-        height: 24px;
+        width: 25px;
+        height: 25px;
         color: #54656f;
         cursor: pointer;
+        transition: .2s ease;
+    }
+
+    svg:hover {
+        transform: scale(1.1);
     }
 `;

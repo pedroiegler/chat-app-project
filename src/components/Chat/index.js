@@ -1,9 +1,9 @@
 import React from "react";
 import ChatHeader from "../ChatHeader";
 import Default from "./../Default";
-import * as C from "./styles";
 import ChatBody from "../ChatBody";
 import ChatFooter from "../ChatFooter";
+import * as C from "./styles";
 
 const Chat = ({ userChat }) => {
   if (!userChat) return <Default />;

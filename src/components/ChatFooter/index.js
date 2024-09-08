@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import * as C from "./styles";
 import { MdSend } from "react-icons/md";
 import { auth, db } from "../../services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import firebase from "firebase/compat/app";
+import * as C from "./styles";
 
 const ChatFooter = ({ chatId }) => {
   const [user] = useAuthState(auth);
@@ -26,7 +26,7 @@ const ChatFooter = ({ chatId }) => {
     <C.Container>
       <C.Form onSubmit={handleSendMessage}>
         <C.Input
-          placeholder="Mensagem"
+          placeholder="Digite uma mensagem"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
         />

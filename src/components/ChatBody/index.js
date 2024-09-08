@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { db } from "../../services/firebase";
-import * as C from "./styles";
 import { useCollection } from "react-firebase-hooks/firestore";
 import Message from "../Message";
+import * as C from "./styles";
 
 const ChatBody = ({ chatId }) => {
   const [messagesRes] = useCollection(

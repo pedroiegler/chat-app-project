@@ -1,6 +1,6 @@
 import React from "react";
+import { MdPerson } from "react-icons/md";
 import * as C from "./styles";
-import { MdPerson, MdMoreVert, MdSearch } from "react-icons/md";
 
 const ChatHeader = ({ photoURL, name }) => {
   return (
@@ -11,10 +11,6 @@ const ChatHeader = ({ photoURL, name }) => {
           <C.Name>{name}</C.Name>
         </C.NameContent>
       </C.UserInfo>
-      <C.Options>
-        <MdSearch />
-        <MdMoreVert />
-      </C.Options>
     </C.Container>
   );
 };

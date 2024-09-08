@@ -1,9 +1,9 @@
 import React from "react";
-import * as C from "./styles";
 import SidebarChatsItem from "../SidebarChatsItem";
 import { auth, db } from "../../services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
+import * as C from "./styles";
 
 const SidebarChats = ({ setUserChat, userChat }) => {
     const [user] = useAuthState(auth);
@@ -11,7 +11,6 @@ const SidebarChats = ({ setUserChat, userChat }) => {
         .collection("chats")
         .where("users", "array-contains", user.email);
     const [chatsSnapshot] = useCollection(refChat);
-
 
     return (
         <C.Container>

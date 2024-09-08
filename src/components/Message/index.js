@@ -1,7 +1,7 @@
 import React from "react";
-import * as C from "./styles";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../services/firebase";
+import * as C from "./styles";
 
 const Message = ({ user, message }) => {
   const [userLoggedIn] = useAuthState(auth);

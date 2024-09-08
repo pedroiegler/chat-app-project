@@ -1,8 +1,8 @@
 import React from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../../services/firebase";
-import * as C from "./styles";
 import { MdPerson } from "react-icons/md";
+import * as C from "./styles";
 
 const getUser = (users, userLogged) => 
     users?.filter((user) => user !== userLogged?.email)[0];

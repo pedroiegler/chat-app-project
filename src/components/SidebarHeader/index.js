@@ -1,10 +1,13 @@
 import React from "react";
-import * as C from "./styles";
-import { MdDonutLarge, MdChat, MdMoreVert } from "react-icons/md";
-import * as EmailValidator from "email-validator";
+import { MdChat } from "react-icons/md";
+import { TbLogout2 } from "react-icons/tb";
 import { auth, db } from "../../services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
+import * as C from "./styles";
+import "../../styles/styles.css";
+import * as EmailValidator from "email-validator";
+import Swal from 'sweetalert2';
 
 const SidebarHeader = ({ setUserChat }) => {
     const [user] = useAuthState(auth);
@@ -13,19 +16,73 @@ const SidebarHeader = ({ setUserChat }) => {
         .where("users", "array-contains", user.email);
     const [chatsSnapshot] = useCollection(refChat);
 
-    const handleCreateChat = () => {
-        const emailInput = prompt("Escreva o e-mail desejado");
-
+    const handleCreateChat = async () => {
+        const { value: emailInput } = await Swal.fire({
+            title: 'Digite o e-mail para começar uma conversa',
+            input: 'email',
+            inputPlaceholder: 'Digite o e-mail',
+            confirmButtonText: 'Continuar',
+            confirmButtonColor: '#1c45ab',
+            customClass: {
+                title: 'custom-swal-title',  
+                htmlContainer: 'custom-swal-text',
+                icon: 'custom-icon-class',
+                confirmButton: 'custom-button',
+                input: 'custom-input-class',
+            },
+            inputValidator: (value) => {
+                if (!value) {
+                    return 'Você precisa digitar um e-mail';
+                }
+            }
+        });
+    
         if (!emailInput) return;
-
+    
         if(!EmailValidator.validate(emailInput)){
-            return alert("E-mail inválido!");
+            return Swal.fire({
+                title: 'E-mail inválido!',
+                text: 'Por favor, insira um e-mail válido.',
+                icon: 'warning',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#1c45ab',
+                customClass: {
+                    title: 'custom-swal-title',  
+                    htmlContainer: 'custom-swal-text',
+                    icon: 'custom-icon-class',
+                    confirmButton: 'custom-button',
+                }
+            });
         } else if(emailInput === user.email){
-            return alert("Insira um e-mail diferente do seu!");
+            return Swal.fire({
+                title: 'E-mail inválido!',
+                text: 'Insira um e-mail diferente do seu.',
+                icon: 'warning',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#1c45ab',
+                customClass: {
+                    title: 'custom-swal-title',  
+                    htmlContainer: 'custom-swal-text',
+                    icon: 'custom-icon-class',
+                    confirmButton: 'custom-button',
+                }
+            });
         } else if(chatExists(emailInput)){
-            return alert("Chat já existe!");
+            return Swal.fire({
+                title: 'Chat já existe!',
+                text: 'Você já possui um chat com este e-mail.',
+                icon: 'info',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#1c45ab',
+                customClass: {
+                    title: 'custom-swal-title',  
+                    htmlContainer: 'custom-swal-text',
+                    icon: 'custom-icon-class',
+                    confirmButton: 'custom-button',
+                }
+            });
         }
-
+    
         db.collection("chats").add({
             users: [user.email, emailInput],
         });
@@ -40,14 +97,12 @@ const SidebarHeader = ({ setUserChat }) => {
 
     return (
         <C.Container>
-            <C.Avatar
-                src={user?.photoURL}
-                onClick={() => [auth.signOut(), setUserChat(null)]}
-            />
+            <C.Content>
+                <TbLogout2 onClick={() => [auth.signOut(), setUserChat(null)]} />
+                <C.Avatar src={user?.photoURL} />
+            </C.Content>
             <C.Options>
-                <MdDonutLarge />
                 <MdChat onClick={handleCreateChat} />
-                <MdMoreVert />
             </C.Options>
         </C.Container>
     )

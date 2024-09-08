@@ -5,4 +5,6 @@ export const Container = styled.div`
     heigth: 100vh;
     align-items: center;
     justify-content; center;
+
+    
 `;

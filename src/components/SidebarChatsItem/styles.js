@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding: 15px 20px;
     cursor: pointer;
 
@@ -26,15 +26,15 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.span`
-    font-size: 18px;
+    font-size: 17px;
     overflow: hidden;
     text-overflow: ellipsis;
 `;
 
 export const Avatar = styled.img`
-    width: 30px;
-    height: 30px;
+    width: 49px;
+    height: 49px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 13px;
     min-width: fit-content;
 `;
