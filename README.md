@@ -4,7 +4,7 @@ Bem-vindo ao repositório do projeto "Chat"! Neste projeto, foi desenvolvido uma
 
 > ## 🛠️ Tecnologias Utilizadas
 
-- **React.JS**: Biblioteca JavaScript para construir interfaces de usuário, focada em criar componentes reutilizáveis e eficientes.<br>
+- **React**: Biblioteca JavaScript para construir interfaces de usuário, focada em criar componentes reutilizáveis e eficientes.<br>
 - **Firebase**: Plataforma do Google que oferece diversas funcionalidades, como autenticação e banco de dados em tempo real, facilitando o desenvolvimento de back-end.<br>
 - **Google Authentication**: Sistema de autenticação via conta Google, permitindo que os usuários façam login de forma rápida e segura.<br>
 - **Styled-Components**: Biblioteca para estilização em React, permitindo que os estilos sejam escritos diretamente nos componentes, tornando o código mais modular e fácil de manter.<br>
