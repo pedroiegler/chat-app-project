@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { db } from "../../services/firebase";
+import { db } from "../../../../events-app-project/src/services/firebase";
 import { useCollection } from "react-firebase-hooks/firestore";
 import Message from "../Message";
 import * as C from "./styles";

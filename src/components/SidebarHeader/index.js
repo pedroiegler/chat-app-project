@@ -1,7 +1,7 @@
 import React from "react";
 import { MdChat } from "react-icons/md";
 import { TbLogout2 } from "react-icons/tb";
-import { auth, db } from "../../services/firebase";
+import { auth, db } from "../../../../events-app-project/src/services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
 import * as C from "./styles";

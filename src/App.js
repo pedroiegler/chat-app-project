@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "./services/firebase";
+import { auth, db } from "../../events-app-project/src/services/firebase";
 import Login from "./components/Login";
 import Loading from "./components/Loading";
 import Sidebar from "./components/Sidebar";

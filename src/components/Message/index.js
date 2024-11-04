@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../services/firebase";
+import { auth } from "../../../../events-app-project/src/services/firebase";
 import * as C from "./styles";
 
 const Message = ({ user, message }) => {

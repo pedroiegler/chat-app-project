@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdSend } from "react-icons/md";
-import { auth, db } from "../../services/firebase";
+import { auth, db } from "../../../../events-app-project/src/services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import firebase from "firebase/compat/app";
 import * as C from "./styles";
